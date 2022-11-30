@@ -8,8 +8,8 @@ const fetcher = async (...args) => {
 };
 
 function Profile() {
-  const { data } = useSWR('/api/user', fetcher, { suspense: true });
-  return <div>Hello, {data.name}!</div>;
+  const { data } = useSWR('/', fetcher, { suspense: true });
+  return <div>{data}!</div>;
 }
 
 export default function App() {
